@@ -27,33 +27,18 @@
 	left: 50%;
 	transform: translateX(-50%);
 	.CT {
-		color: var(--color-new-ct);
-		.round-thingy {
-			.inner {
-				background-color: #28abff;
-			}
-			background-color: #28abff80;
-		}
+		color: #FFF;
 	}
 	.T {
-		color: var(--color-new-t);
-		.round-thingy {
-			.inner {
-				background-color: #ffc600;
-			}
-			background-color: #ffc60080;
-		}
+		color: #FFF;
 	}
 	#timer {
 		display: flex;
 		flex-direction: column;
 		position: relative;
 		width: 126px;
-		height: 115px;
-		margin-left: 8px;
-		margin-right: 8px;
+		height: 105px;
 		background-color: var(--sub-panel-color);
-        top: -10px;
         &.no-bo {
             height: 87px;
         }
@@ -111,10 +96,10 @@
 		display: flex;
 		flex-direction: column;
 		width: 100%;
-		height: 27px;
+		height: 25px;
 		align-items: center;
 		justify-content: center;
-		font-size: 14px;
+		font-size: 16px;
 		font-weight: bold;
 		z-index: 1;
         color: var(--white-full);
@@ -167,7 +152,7 @@
 		align-items: center;
 		justify-content: center;
 		font-weight: 600;
-		font-size: 30px;
+		font-size: 36px;
 		background-color: var(--sub-panel-color);
 	}
 	.round-thingy {
@@ -192,8 +177,14 @@
 		align-items: center;
 		justify-content: center;
 		font-weight: 600;
-		font-size: 36px;
-		background-color: var(--sub-panel-color);
+		font-size: 42px;
+		color: var(--white-full);
+		&.CT {
+            background-color: var(--color-ct);
+        }
+        &.T {
+            background-color: var(--color-t);
+        }
 	}
 	.bar {
 		display: flex;
@@ -213,15 +204,14 @@
 	position: fixed;
 	display: none;
 	opacity: 1;
-	width: 503px;
-	height: 50px;
+	width: 425px;
+	height: 49px;
 	top: 70px;
 	align-items: center;
-	color: black;
+	color: var(--white-full);
 	justify-content: center;
-	background-color: white;
+	background-color: var(--sub-panel-color);
 	font-size: 20px;
-	font-family: Montserrat;
     font-weight: 600;
     &.show {
         display: flex;
@@ -229,10 +219,10 @@
         animation-fill-mode: forwards;
     }
     &.right {
-        left: calc(50% + 71px);
+        left: calc(50% + 141px);
     }
     &.left {
-        right: calc(50% + 71px);
+        right: calc(50% + 141px);
     }
 }
 
@@ -240,8 +230,9 @@
 	position: fixed;
 	display: flex;
 	opacity: 1;
-	width: 503px;
+	width: 425px;
 	height: 49px;
+	//margin-right: 69.9px;
 	top: 70px;
 	align-items: center;
 	color: white;
@@ -263,13 +254,13 @@
 		}
     }
     &.right {
-        left: calc(50% + 71px);
+        left: calc(50% + 141px);
         .defuse_plant_bar {
             left: 0;
         }
     }
     &.left {
-        right: calc(50% + 71px);
+        right: calc(50% + 141px);
         .defuse_plant_bar {
             right: 0;
         }
@@ -318,7 +309,7 @@
 	display: flex;
 	flex-direction: row;
 	width: 126px;
-	height: 30px;
+	height: 35px;
 }
 #series_text {
 	display: flex;
@@ -327,14 +318,14 @@
 	height: 100%;
 	align-items: center;
 	justify-content: center;
-	font-size: 12px;
+	font-size: 16px;
 	font-weight: bold;
 	color: var(--white-full);
 }
 .container {
 	display: flex;
 	flex-direction: row;
-	width: 511px;
+	width: 411px;
 	height: 100%;
 }
 .container.left {
@@ -347,12 +338,15 @@
 	display: flex;
 	flex-direction: row;
 	width: 400px;
-	height: 30px;
+	height: 35px;
 	z-index: 1;
-	padding-left: 6px;
-	padding-right: 6px;
 	top: -30px;
 	transition: top 0.5s;
+	justify-content: flex-end;
+
+}
+.series_wins.right {
+	justify-content: flex-start;
 }
 .series_wins.show {
 	top: 0px;
@@ -360,10 +354,12 @@
 .wins_box_container {
 	display: flex;
 	flex-direction: row;
-	width: 100%;
+	width: 77.5px;
 	height: 100%;
 	align-items: flex-start;
-	justify-content: flex-start;
+	justify-content: center;
+	background-color: var(--sub-panel-color);
+	
 }
 .series_wins.left {
 	.wins_box_container {
@@ -371,21 +367,26 @@
 	}
 }
 .wins_box {
-	width: 77px;
-	height: 7px;
+	width: 17px;
+	height: 17px;
 	margin-left: 2px;
 	margin-right: 2px;
+	margin-top: 8px;
 	box-sizing: border-box;
+
 }
 .wins_box.CT {
 	background-color: rgba(0,0,0,0.6);
+	border: rgba(255, 255, 255, 0.5) solid 1px;
 }
 .wins_box.CT.win {
-	background-color: var(--color-new-ct);
+	background-color: var(--color-ct);
+	
 }
 .wins_box.T {
 	background-color: rgba(0,0,0,0.6);
+	border: rgba(255, 255, 255, 0.5) solid 1px
 }
 .wins_box.T.win {
-	background-color: var(--color-new-t);
+	background-color: var(--color-t);
 }

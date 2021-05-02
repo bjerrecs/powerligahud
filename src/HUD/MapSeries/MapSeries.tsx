@@ -22,7 +22,7 @@ class VetoEntry extends React.Component<IVetoProps> {
         const { veto, teams, active } = this.props;
         return <div className={`veto_container ${active ? 'active' : ''}`}>
             <div className="veto_map_name">
-                {veto.mapName}
+                {veto.mapName.replace("de_","")}
             </div>
             <div className="veto_picker">
                 <TeamLogo team={teams.filter(team => team.id === veto.teamId)[0]} />

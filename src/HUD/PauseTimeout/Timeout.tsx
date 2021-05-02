@@ -1,5 +1,6 @@
 import React from "react";
 import { Map, PhaseRaw } from "csgogsi-socket";
+import TeamLogo from "./../MatchBar/TeamLogo";
 
 
 interface IProps {
@@ -15,7 +16,8 @@ export default class Timeout extends React.Component<IProps> {
         
         return (
             <div id={`timeout`} className={`${time && time > 2 && phase && (phase.phase === "timeout_t" || phase.phase === "timeout_ct") ? 'show' : ''} ${phase && (phase.phase === "timeout_t" || phase.phase === "timeout_ct") ? phase.phase.substr(8): ''}`}>
-                { team.name } TIMEOUT
+                <TeamLogo team={team} /> { team.name }<br/> Tactical Timeout<TeamLogo team={team} />
+
             </div>
         );
     }

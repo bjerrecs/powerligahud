@@ -8,6 +8,8 @@ import { apiUrl } from './../../api/api';
 import { getCountry } from "./../countries";
 import { ArmorHelmet, ArmorFull, HealthFull, Bullets } from './../../assets/Icons';
 import { Veto } from "../../api/interfaces";
+import sponsor_1 from './../../assets/sponsors/sponsor_1.png';
+import sponsor_2 from './../../assets/sponsors/sponsor_2.png';
 
 class Statistic extends React.PureComponent<{ label: string; value: string | number, }> {
 	render() {
@@ -41,13 +43,10 @@ export default class Observed extends React.Component<{ player: Player | null, v
 		return (
 			<div className={`observed ${player.team.side}`}>
 				<div className="main_row">
-					<Avatar steamid={player.steamid} height={140} width={140} showCam={true} slot={player.observer_slot}/>
-					<TeamLogo team={player.team} height={35} width={35} />
+					<Avatar steamid={player.steamid} height={200} width={200} showCam={true} slot={player.observer_slot}/>
 					<div className="username_container">
 						<div className="username">{player.name}</div>
-						<div className="real_name">{player.realName}</div>
 					</div>
-					<div className="flag">{countryName ? <img src={`${apiUrl}files/img/flags/${countryName.replace(/ /g, "-")}.png`} alt={countryName} /> : ''}</div>
 					<div className="grenade_container">
 						{grenades.map(grenade => <React.Fragment key={`${player.steamid}_${grenade.name}_${grenade.ammo_reserve || 1}`}>
 							<Weapon weapon={grenade.name} active={grenade.state === "active"} isGrenade />
@@ -71,7 +70,6 @@ export default class Observed extends React.Component<{ player: Player | null, v
 						<Statistic label={"K"} value={stats.kills} />
 						<Statistic label={"A"} value={stats.assists} />
 						<Statistic label={"D"} value={stats.deaths} />
-						<Statistic label={"K/D"} value={ratio.toFixed(2)} />
 					</div>
 					<div className="ammo">
 						<div className="ammo_icon_container">

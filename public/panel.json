@@ -30,6 +30,22 @@
         ]
     },
     {
+        "label": "Custom Settings",
+        "name":"custom_settings",
+        "inputs": [
+            {
+                "type": "text",
+                "name": "ct_color",
+                "label": "Counter Terroist Color (rgba)"
+            },
+            {
+                "type": "text",
+                "name": "t_color",
+                "label": "Terroist Color (rgba)"
+            }
+        ]
+    },
+    {
         "label": "Display settings",
         "name":"display_settings",
         "inputs": [
@@ -87,21 +103,6 @@
                 "type": "match",
                 "name": "match_preview",
                 "label": "Pick an upcoming match"
-            },
-            {
-                "type": "select",
-                "name": "select_preview",
-                "label": "Mood indicator",
-                "values": [
-                    {
-                        "name": "show",
-                        "label": ":)"
-                    },
-                    {
-                        "name": "hide",
-                        "label": ":("
-                    }
-                ]
             },
             {
                 "type": "player",

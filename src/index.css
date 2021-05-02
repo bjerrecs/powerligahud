@@ -44,12 +44,26 @@ code {
   --color-gray: rgba(191, 191, 191, 1.0);
   --color-moneys: #a7d32e;
   --dev-purple: rgba(200, 0, 255, 1);
-  --color-t: #c19511;
-  --color-ct: #5788a8;
+  /*--color-t: rgba(193, 149, 17, 1);*/
+  --color-t: rgb(236, 102, 8);
+  /*--color-ct: rgba(87, 136, 168, 1);*/
+  --color-ct: rgba(45, 108, 162, 1);
   --color-new-t: #f0c941;
   --color-new-ct: #5ab8f4;
   --color-bomb: #f22222;
   --color-defuse: #2222f2;
+
+  --powerLiga-main: rgb(236, 102, 8);
+  --dust2-color: rgba(45, 108, 162, 1);
+
+  /* CT HP_BAR GRADEIENT*/
+  --ct-hp-bar: linear-gradient(90deg, rgba(66,83,99,1) 0%, rgba(87, 136, 168,1) 47%, rgba(87, 136, 168,1) 100%);
+  --t-hp-bar: linear-gradient(270deg, rgba(184,127,4,1) 0%, rgba(193, 149, 17, 1) 47%, rgba(193, 149, 17, 1) 100%);
+
+  /* CT HP_BAR GRADEIENT */
+  /* CUSTOM FOR POWER LIGA */
+  --ct-hp-bar: linear-gradient(90deg, rgb(27, 65, 98) 0%, rgba(45, 108, 162,1) 47%, rgba(45, 108, 162,1) 100%);
+  --t-hp-bar: linear-gradient(270deg, rgb(197, 87, 8) 0%, rgba(236, 102, 8, 1) 47%, rgba(236, 102, 8, 1) 100%);
 }
 
 
