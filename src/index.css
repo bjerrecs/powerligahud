@@ -37,7 +37,6 @@ code {
 
 :root {
   --main-panel-color: rgba(30, 34, 36, 0.85);
-  --test3: #4c4c4c;
   --sub-panel-color: rgba(42, 47, 50, 0.85);
   --white-dull: rgba(10, 5, 5, 0.25);
   --white-full: rgba(250, 250, 250, 1);

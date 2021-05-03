@@ -263,22 +263,21 @@
     }
 }
 
-.sponsor_spot {
- position: absolute;
- white-space: nowrap;
- width: 620px;
- height: 100px;
- background-color: rgba(0,0,0,0.6);
- top: 100px;
- left: 0px;
- display: table;
- vertical-align: middle;
-    .test {
-        display: table-cell;
-
+.sponsor_spots {
+    display: flex;
+    bottom: -110px;
+    position: absolute;
+    align-self: center;
+    .sponsor {
+        align-self: center;
+        background: rgba(0, 0, 0, 0.6);
+        border-radius: 15px;
+        margin-left: 25px;
+        margin-right: 25px;
+        padding: 5px 15px 5px 15px;
+        img {
+            height: 75px;
+            width: auto;
+        }
     }
-    img {
-        max-width: 100%;
-    }
-
 }

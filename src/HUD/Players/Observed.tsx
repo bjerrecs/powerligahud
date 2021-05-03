@@ -10,7 +10,6 @@ import { ArmorHelmet, ArmorFull, HealthFull, Bullets } from './../../assets/Icon
 import { Veto } from "../../api/interfaces";
 import sponsor_1 from './../../assets/sponsors/sponsor_1.png';
 import sponsor_2 from './../../assets/sponsors/sponsor_2.png';
-
 class Statistic extends React.PureComponent<{ label: string; value: string | number, }> {
 	render() {
 		return (
@@ -79,6 +78,14 @@ export default class Observed extends React.Component<{ player: Player | null, v
 							<div className="ammo_clip">{(currentWeapon && currentWeapon.ammo_clip) || "-"}</div>
 							<div className="ammo_reserve">/{(currentWeapon && currentWeapon.ammo_reserve) || "-"}</div>
 						</div>
+					</div>
+				</div>
+				<div className="sponsor_spots">
+					<div className="sponsor">
+						<img src={sponsor_1}/>
+					</div>
+					<div className="sponsor">
+						<img src={sponsor_2}/>
 					</div>
 				</div>
 			</div>
