@@ -9,7 +9,7 @@ import { getCountry } from "./../countries";
 import { ArmorHelmet, ArmorFull, HealthFull, Bullets } from './../../assets/Icons';
 import { Veto } from "../../api/interfaces";
 import sponsor_1 from './../../assets/sponsors/sponsor_1.png';
-import sponsor_2 from './../../assets/sponsors/sponsor_2.png';
+import sponsor_2 from './../../assets/sponsors/sponsor_3.png';
 class Statistic extends React.PureComponent<{ label: string; value: string | number, }> {
 	render() {
 		return (
@@ -42,7 +42,7 @@ export default class Observed extends React.Component<{ player: Player | null, v
 		return (
 			<div className={`observed ${player.team.side}`}>
 				<div className="main_row">
-					<Avatar steamid={player.steamid} height={200} width={200} showCam={true} slot={player.observer_slot}/>
+					<div className="flag">{countryName ? <img src={`${apiUrl}files/img/flags/${countryName.replace(/ /g, "-")}.png`} alt={countryName} /> : ''}</div>
 					<div className="username_container">
 						<div className="username">{player.name}</div>
 					</div>
@@ -53,8 +53,14 @@ export default class Observed extends React.Component<{ player: Player | null, v
 							grenade.ammo_reserve === 2 ? <Weapon weapon={grenade.name} active={grenade.state === "active"} isGrenade /> : null }
 						</React.Fragment>)}
 					</div>
+					<Avatar steamid={player.steamid} height={200} width={200} showCam={true} slot={player.observer_slot}/>
 				</div>
 				<div className="stats_row">
+					<div className="statistics">
+						<Statistic label={"K"} value={stats.kills} />
+						<Statistic label={"A"} value={stats.assists} />
+						<Statistic label={"D"} value={stats.deaths} />
+					</div>
 					<div className="health_armor_container">
 						<div className="health-icon icon">
 							<HealthFull />
@@ -64,11 +70,6 @@ export default class Observed extends React.Component<{ player: Player | null, v
 							{player.state.helmet ? <ArmorHelmet /> : <ArmorFull />}
 						</div>
 						<div className="health text">{player.state.armor}</div>
-					</div>
-					<div className="statistics">
-						<Statistic label={"K"} value={stats.kills} />
-						<Statistic label={"A"} value={stats.assists} />
-						<Statistic label={"D"} value={stats.deaths} />
 					</div>
 					<div className="ammo">
 						<div className="ammo_icon_container">
@@ -86,6 +87,9 @@ export default class Observed extends React.Component<{ player: Player | null, v
 					</div>
 					<div className="sponsor">
 						<img src={sponsor_2}/>
+					</div>
+					<div className="sponsor">
+						<img src={sponsor_1}/>
 					</div>
 				</div>
 			</div>

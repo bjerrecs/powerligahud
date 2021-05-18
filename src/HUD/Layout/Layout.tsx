@@ -17,7 +17,7 @@ import Overview from "../Overview/Overview";
 import Tournament from "../Tournament/Tournament";
 import Pause from "../PauseTimeout/Pause";
 import Timeout from "../PauseTimeout/Timeout";
-import eventlogo from './../../assets/eventlogo.png';
+
 
 interface Props {
   game: CSGO,
@@ -118,9 +118,6 @@ export default class Layout extends React.Component<Props, State> {
           />
         </div>
         <div className={"boxes right"}>
-        <div className="eventlogo">
-        <img src={eventlogo}/>
-        </div>
         <SideBox side="right" hide={forceHide} />
           <UtilityLevel side={right.side} players={game.players} show={isFreezetime && !forceHide} />
           <MoneyBox
