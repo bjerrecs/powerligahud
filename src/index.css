@@ -37,7 +37,7 @@ code {
 
 :root {
   --main-panel-color: rgba(30, 34, 36, 0.85);
-  --sub-panel-color: rgba(42, 47, 50, 0.85);
+  --sub-panel-color: rgba(29, 34, 41, 0.9);
   --white-dull: rgba(10, 5, 5, 0.25);
   --white-full: rgba(250, 250, 250, 1);
   --white-half: rgba(250, 250, 250, 0.5);
@@ -63,6 +63,6 @@ code {
   --ct-hp-bar: linear-gradient(90deg, rgb(27, 65, 98) 0%, rgba(45, 108, 162,1) 47%, rgba(45, 108, 162,1) 100%);
   --t-hp-bar: linear-gradient(270deg, rgb(202, 113, 61) 0%, rgba(248, 138, 74, 1) 47%, rgba(248, 138, 74, 1) 100%);
 
-  --observed-ct: radial-gradient(circle, rgba(45,108,162,1) 0%, rgba(27,65,98,0.95) 100%);
+  --observed-ct: radial-gradient(circle, rgba(45,108,162,1) 0%, rgba(34, 78, 117, 0.95) 100%);
   --observed-t: radial-gradient(circle, rgba(248, 138, 74,1) 0%, rgba(202, 113, 61,0.95) 100%);
 }

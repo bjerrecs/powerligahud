@@ -133,6 +133,7 @@
             }
             .logo {
                 justify-content: flex-end;
+				border-radius: 10px 0 0 10px;
             }
         }
         &.right {
@@ -143,6 +144,7 @@
             }
             .logo {
                 justify-content: flex-start;
+				border-radius: 0 10px 10px 0;
             }
         }
 	}
@@ -348,7 +350,9 @@
 }
 .series_wins.right {
 	justify-content: flex-start;
+	
 }
+
 .series_wins.show {
 	top: 0px;
 }
@@ -360,8 +364,10 @@
 	align-items: flex-start;
 	justify-content: center;
 	background-color: var(--sub-panel-color);
+
 	
 }
+
 .series_wins.left {
 	.wins_box_container {
 		flex-direction: row-reverse;
